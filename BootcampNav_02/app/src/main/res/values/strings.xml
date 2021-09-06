@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BootcampNav_02</string>
+    <string name="set_name">Set Name</string>
+    <string name="hi_my_name_is">Hi! My name is ______</string>
+    <string name="hi_my_name_is_with_name">Hi! My name is %1$s</string>
+    <string name="what_is_your_name">What is your name?</string>
+    <string name="save">save</string>
+</resources>
