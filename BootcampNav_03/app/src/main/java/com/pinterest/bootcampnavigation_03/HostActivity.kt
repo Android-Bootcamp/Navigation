@@ -12,7 +12,17 @@ class HostActivity : AppCompatActivity(), ListActionListener {
     }
 
     override fun onMessageClicked(message: Message) {
-        // TODO: Replace this Toast with navigation!
-        Toast.makeText(this, "Message clicked: ${message.body}", Toast.LENGTH_LONG).show()
+        val messageFragment = supportFragmentManager.findFragmentById(R.id.detail_fragment) as? MessageFragment
+
+        // If the fragment does not exist, we add it to the stack (Portrait Mode)
+        if (messageFragment == null || !messageFragment.isInLayout) {
+            supportFragmentManager.beginTransaction()
+                .add(R.id.fragment_container, MessageFragment.newInstance(message.sender, message.body))
+                .addToBackStack(null)
+                .commit()
+        } else {
+            // Otherwise, we update it's contents (Landscape mode)
+            messageFragment.updateMessage(message)
+        }
     }
 }
