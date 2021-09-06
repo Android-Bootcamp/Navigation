@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:background="@android:color/holo_blue_dark"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/sender_text_view"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:textColor="@android:color/primary_text_dark"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        tools:text="John Doe" />
+
+    <TextView
+        android:id="@+id/timestamp_text_view"
+        android:layout_width="wrap_content"
+        android:layout_weight="0"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/primary_text_dark"
+        android:padding="8dp"
+        android:layout_marginStart="8dp"
+        tools:text="Jun 15, 2021" />
+
+</LinearLayout>
