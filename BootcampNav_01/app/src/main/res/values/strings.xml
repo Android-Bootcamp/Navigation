@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BootcampNav_01</string>
+    <string name="open_second_activity">Open second activity</string>
+    <string name="second_activity_title">This is the Second Activity!</string>
+</resources>
