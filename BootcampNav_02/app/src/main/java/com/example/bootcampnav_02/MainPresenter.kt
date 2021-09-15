@@ -18,8 +18,10 @@ class MainPresenter : MVPPresenter, ViewListener {
     }
 
     override fun onNameSet(name: String?) {
-        name?.let {
+        if (name != null) {
             view?.setName(view?.getContext()?.getString(R.string.hi_my_name_is_with_name, name) ?: "")
-        } ?: view?.getContext()?.getString(R.string.hi_my_name_is)
+        } else {
+            view?.setName(view?.getContext()?.getString(R.string.hi_my_name_is) ?: "")
+        }
     }
 }
